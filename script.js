@@ -13,7 +13,7 @@ console.log("Hola " + nombre2);
 var edad = window.prompt("Introduce tu edad: ");
 if (edad >= 18) {
     console.log("Eres mayor de edad");
-}else{
+} else {
     console.log("Eres menor de edad");
 }
 
@@ -25,19 +25,19 @@ if (edad >= 18) {
 //const: constante (su valor no puede cambiar) (se utiliza siempre que se pueda)
 
 //Definicion de funcion
-function cacularEdad(){
-    const edad = window.prompt("Introduce tu edad: ");  
-if (edad >= 18) {
-    var mensaje = "Eres mayor de edad";
-}else{
-    var mensaje = "Eres menor de edad";
-} 
-console.log(mensaje);
-} 
+function cacularEdad() {
+    const edad = window.prompt("Introduce tu edad: ");
+    if (edad >= 18) {
+        var mensaje = "Eres mayor de edad";
+    } else {
+        var mensaje = "Eres menor de edad";
+    }
+    console.log(mensaje);
+}
 
 //Llamada a la funcion
 cacularEdad();
- 
+
 //Ejemplo 6
 let auxiliar;
 auxiliar = 10;
@@ -54,6 +54,18 @@ console.log(auxiliar);
 
 
 //Ejemplo 7 Primer bucle
-function potencia(base, exponente){
-    let resultado = 1;  
+function potencia(base, exponente) {
+
+    let resultado = 1;
+
+    while (exponente > 0) {
+        resultado *= base;
+        exponente--;
+    }
+
+    return resultado;
 }
+
+let base =2;
+let exponente = 3;
+console.log(`El resultado de ${base}^${exponente} es: ${potencia(base, exponente)}`);
