@@ -127,3 +127,52 @@ function ejemplo9() {
 }
 
 ejemplo9();
+
+//Ejemplo 10: Calculadora. Pide dos numeros y muestra un menu para que los 
+//sume, retse, multiplique o divida segun la opcion marcada. Valida los datos.
+
+function calculadora() {
+    let num1 = parseInt(window.prompt("Introduce el primer operando: "));
+    let num2 = parseInt(window.prompt("Introduce el segundo operando: "));
+
+    let salir = false;
+    let resultado = 0;
+
+    do {
+        let opc = window.prompt("Elija una operación: \n" +
+            "a. Suma \n" +
+            "b. Resta \n" +
+            "c. Multiplicación \n" +
+            "d. División \n" +
+            "e. Potencia \n" +
+            "f. Salir");
+
+        switch (opc) {
+            case 'a':
+                resultado = num1 + num2;
+                break;
+            case 'b':
+                resultado = num1 - num2;
+                break;
+            case 'c':
+                resultado = num1 * num2;
+                break;
+            case 'd':
+                //Validar division por cero
+                resultado = num1 / num2;
+                break;
+            case 'e':
+                resultado = potencia(num1, num2);
+                break;
+            case 'f':
+                salir = true;
+                break;
+        }
+
+        console.log(resultado);
+
+    } while (!salir);
+
+}
+
+calculadora();
