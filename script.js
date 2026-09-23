@@ -176,3 +176,40 @@ function calculadora() {
 }
 
 calculadora();
+
+//Ejemplo 12: Pide el precio del producto por pantalla. Si es superior a 50 euros
+//el envio sale gratis. Si no 5€. El sistema debe mostrar al ppio el precio original
+//y al final el precio total
+
+function ejemplo12() {
+    let precio = parseInt(window.prompt("Introduce el precio: "));
+    console.log("Precio original: " + precio);
+   
+    precio = (precio > 50) ? precio : precio + 5;
+    console.log("Precio total: " + precio);
+}
+
+ejemplo12();
+
+
+//Ejemplo 13: Crea un programa que calcule un numero aleatorio y pida al usuario
+// numeros hasta que lo acierte. Al finalizar, si el numero de intentos es superior
+//a 10 pintará por pantalla ¡has perdido! y ¡has ganado! si es inferior.
+
+function ejemplo13() {
+    let aleatorio = Math.floor(Math.random() * 100) + 1;
+    let intentos = 0;
+    let numero;
+
+    while (numero !== aleatorio) {
+        numero = parseInt(window.prompt("Adivina el número: "));
+        intentos++;
+    }
+
+    console.log("Número de intentos: " + intentos);
+    console.log(intentos > 10 ? "¡Has perdido!" : "¡Has ganado!");
+}
+
+ejemplo13();
+
+
