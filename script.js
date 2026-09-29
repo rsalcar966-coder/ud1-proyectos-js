@@ -373,23 +373,69 @@ ejemplo20();
 //================================================================================================
 
 
-// 1. Datos personales: declara variables para almacenar tu nombre, edad y ciudad; muestra por consola una frase con esos datos.
+// 1. Datos personales: declara variables para almacenar tu nombre, 
+// edad y ciudad; muestra por consola una frase con esos datos.
+function datosPersonales() {
+    const nombre = "Ruben";
+    const edad = 30;
+    const ciudad = "Madrid";
 
+    console.log("Me llamo " + nombre + ", tengo " + edad + " años y vivo en " + ciudad);
+}
 
-// 2. Área de un rectángulo: declara las variables necesarias para almacenar la base y la altura, y calcula su área.
+datosPersonales();
 
+// 2. Área de un rectángulo: declara las variables necesarias para 
+// almacenar la base y la altura, y calcula su área.
+function areaRectangulo() {
+    const base = 10;
+    const altura = 5;
+    const area = base * altura;
+    console.log("El área del rectángulo es: " + area);
+}
 
-// 3. Conversión de temperatura: convierte una temperatura en grados Celsius a grados Fahrenheit y muestra el resultado.
+areaRectangulo();
 
+// 3. Conversión de temperatura: convierte una temperatura en grados 
+// Celsius a grados Fahrenheit y muestra el resultado.
+function convertirCelsiusAFahrenheit() {
+    const celsius = 25;
+    const fahrenheit = (celsius * 9/5) + 32;
+    console.log(celsius + "°C son " + fahrenheit + "°F");
+}
+
+convertirCelsiusAFahrenheit();
 
 // 4. Precio de una compra: calcula el importe total a partir del precio de un producto y el número de unidades compradas.
+function calcularPrecioCompra() {
+    const precioUnitario = 20;
+    const unidades = 3;
+    const total = precioUnitario * unidades;
+    console.log("El importe total de la compra es: " + total);
+}
 
+calcularPrecioCompra();
 
 // 5. Nómina sencilla: calcula una retención del 15 % sobre un salario bruto y muestra el salario neto.
+function calcularNomina() {
+    const salarioBruto = 2000;
+    const retencion = salarioBruto * 0.15;
+    const salarioNeto = salarioBruto - retencion;
+    console.log("El salario neto es: " + salarioNeto);
+}
 
+calcularNomina();
 
 // 6. Conversión de segundos: convierte un número de segundos en horas, minutos y segundos.
+function convertirSegundos() {
+    const totalSegundos = 3665;
+    const horas = Math.floor(totalSegundos / 3600);
+    const minutos = Math.floor((totalSegundos % 3600) / 60);
+    const segundos = totalSegundos % 60;
+    console.log("El tiempo es: " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos");
+}
 
+convertirSegundos();
 
 // 7. Intercambio de valores: declara dos variables a y b, intercambia sus valores y muestra el resultado antes y después.
 
