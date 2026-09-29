@@ -332,13 +332,171 @@ function ejemplo18() {
 
 }
 
-ejemplo18();
+// ejemplo18();
 
 //Ejemplo 19: Muestra todos los divisores de un número solicitado por pantalla.
+function ejemplo19() {
+    let num = parseInt(window.prompt("Introduce un numero: "));
 
+    for(let i = 0; i < num; i++){
+        if(num % i == 0){
+            console.log(i);
+        }
+    }
+}
+
+// ejemplo19();
 
 //Ejemplo 20: Número perfecto. Pide un número y determina si es perfecto. Un
 //número es perfecto cuando la suma de sus divisores propios sea igual al propio número.
+function ejemplo20() {
+    let num = parseInt(window.prompt("Introduce un numero: "));
+    let suma = 0;
+
+    for(let i = 1; i < num; i++){
+        if(num % i == 0){
+            suma += i;
+        }
+    }
+
+    if(suma == num){
+        console.log("El numero es perfecto");
+    } else {
+        console.log("El numero no es perfecto");
+    }
+}
+
+ejemplo20();
+
+//================================================================================================
+//================================Boletín 01. Entrenamiento JS====================================
+//================================================================================================
+
+
+// 1. Datos personales: declara variables para almacenar tu nombre, edad y ciudad; muestra por consola una frase con esos datos.
+
+
+// 2. Área de un rectángulo: declara las variables necesarias para almacenar la base y la altura, y calcula su área.
+
+
+// 3. Conversión de temperatura: convierte una temperatura en grados Celsius a grados Fahrenheit y muestra el resultado.
+
+
+// 4. Precio de una compra: calcula el importe total a partir del precio de un producto y el número de unidades compradas.
+
+
+// 5. Nómina sencilla: calcula una retención del 15 % sobre un salario bruto y muestra el salario neto.
+
+
+// 6. Conversión de segundos: convierte un número de segundos en horas, minutos y segundos.
+
+
+// 7. Intercambio de valores: declara dos variables a y b, intercambia sus valores y muestra el resultado antes y después.
+
+
+// 8. Mayor de edad: indica mediante un mensaje si una persona es mayor o menor de edad según su edad.
+
+
+// 9. Número positivo, negativo o cero: indica a cuál de estas categorías pertenece un número.
+
+
+// 10. Número mayor: dados dos números, muestra cuál es mayor o indica si son iguales.
+
+
+// 11. Calificación: dada una nota entre 0 y 10, indica si es suspenso, aprobado, notable o sobresaliente.
+
+
+// 12. Año bisiesto: determina si un año es bisiesto.
+
+
+// 13. Calculadora: dados dos números y un operador (+, -, * o /), realiza la operación con una estructura de selección.
+
+
+// 14. Números del 1 al 10: muestra por consola los números del 1 al 10 utilizando una estructura de repetición.
+
+
+// 15. Números pares: muestra todos los números pares comprendidos entre 1 y 100.
+
+
+// 16. Tabla de multiplicar: dado un número, muestra su tabla de multiplicar del 1 al 10.
+
+
+// 17. Suma hasta N: calcula la suma de todos los números comprendidos entre 1 y N.
+
+
+// 18. Factorial: dado un número entero positivo, calcula y muestra su factorial.
+
+
+// 19. Múltiplos de 3: dado un número N, muestra los múltiplos de 3 comprendidos entre 1 y N.
+
+
+// 20. Función saludar: crea una función saludar(nombre) que reciba un nombre como parámetro y muestre un saludo personalizado.
+
+
+// 21. Función para calcular un área: crea calcularArea(base, altura), que reciba la base y la altura de un rectángulo y devuelva su área.
+
+
+// 22. Función para comprobar la mayoría de edad: crea esMayorDeEdad(edad), que devuelva true si la edad es igual o superior a 18 y false en caso contrario.
+
+
+// 23. Función para obtener el mayor: crea una función que reciba dos números y devuelva el mayor.
+
+
+// 24. Función de conversión: crea una función que reciba grados Celsius y devuelva su equivalente en Fahrenheit.
+
+
+// 25. Calculadora mediante funciones: crea sumar(), restar(), multiplicar() y dividir(); solicita dos números y una operación y utiliza la función correspondiente.
+
+
+// 26. Validador de notas: crea una función que reciba una nota y devuelva «Suspenso», «Aprobado», «Notable» o «Sobresaliente»; comprueba varias notas.
+
+
+// 27. Número primo: crea esPrimo(numero), que determine si un número es primo y devuelva true o false.
+
+
+// 28. Adivina el número: genera un número aleatorio entre 1 y 10; pide intentos al usuario e indica si ha acertado o si el número introducido es mayor o menor.
+
+
+// 29. Menú de operaciones: crea un menú para sumar, restar, multiplicar, dividir o salir; utiliza funciones, selección y repetición.
+
+
+// 30. Calculadora avanzada: permite sumar, restar, multiplicar, dividir y calcular potencias; usa una función por operación, repite el menú hasta salir y controla la división entre cero.
+
+
+// 31. Sistema de calificaciones: solicita cuántas notas se introducirán, recógelas con un bucle, valida que estén entre 0 y 10 y usa funciones para calcular la media y la calificación final.
+
+
+// 32. Cajero automático: permite consultar el saldo, retirar, ingresar dinero o salir; usa funciones y un menú repetitivo, e impide retirar más del saldo o cantidades no positivas.
+
+
+// 33. Juego de adivinanza: genera un número aleatorio entre 1 y 100; indica si cada intento es mayor o menor, cuenta los intentos y termina al acertar. Organiza el programa con funciones.
+
+
+// 34. Conversor de unidades: permite convertir kilómetros a millas, Celsius a Fahrenheit, kilogramos a libras o euros a dólares; usa una función por conversión y repite hasta salir.
+
+
+// 35. Control de acceso: almacena un usuario y una contraseña, permite un máximo de tres intentos y bloquea el acceso al agotarlos. 
+// Crea funciones para comprobar credenciales y mostrar el resultado.
+
+
+// 36. Facturación de un producto: calcula el importe a partir del precio y la cantidad; aplica 0 % si es menos de 50 €, 5 % entre 50 € y 100 €, 10 % entre 100 € y 200 € y 15 % si supera 200 €, 
+// y después calcula el IVA del 21 %. Separa los cálculos en funciones.
+
+
+// 37. Menú de gestión de una cuenta: permite consultar saldo, ingresar dinero, retirar, comprobar si hay saldo suficiente o salir; 
+// implementa cada operación con una función y controla las operaciones no válidas.
+
+
+// 38. Estadísticas de números: procesa con un bucle una cantidad determinada de números y calcula el mayor, el menor, la suma y la media. No uses arrays; organiza el código con funciones.
+
+
+// 39. Programa integrador, gestión de notas: permite introducir el nombre del alumno y varias notas, calcular la media, 
+// determinar la calificación y mostrar si ha aprobado. Incluye un menú hasta salir y controla entradas incorrectas.
+
+
+// 40. Reto final, simulador de tienda: permite consultar opciones, introducir precio y cantidad, calcular el subtotal, 
+// aplicar descuentos según el importe y calcular el IVA. Incluye un menú hasta finalizar la compra.
+
 
 
 
