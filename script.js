@@ -375,6 +375,8 @@ function ejemplo20() {
 
 // 1. Datos personales: declara variables para almacenar tu nombre, 
 // edad y ciudad; muestra por consola una frase con esos datos.
+// Se declaran tres constantes con los datos personales y se muestra un mensaje
+// concatenando las variables con el operador + dentro de un console.log.
 function datosPersonales() {
     const nombre = "Ruben";
     const edad = 30;
@@ -387,6 +389,8 @@ function datosPersonales() {
 
 // 2. Área de un rectángulo: declara las variables necesarias para 
 // almacenar la base y la altura, y calcula su área.
+// Se multiplica base por altura para obtener el área (fórmula: A = base × altura)
+// y se muestra el resultado por consola.
 function areaRectangulo() {
     const base = 10;
     const altura = 5;
@@ -398,6 +402,8 @@ function areaRectangulo() {
 
 // 3. Conversión de temperatura: convierte una temperatura en grados 
 // Celsius a grados Fahrenheit y muestra el resultado.
+// La fórmula de conversión es: F = (C × 9/5) + 32
+// Se aplica directamente sobre la variable celsius y se muestra el resultado.
 function convertirCelsiusAFahrenheit() {
     const celsius = 25;
     const fahrenheit = (celsius * 9/5) + 32;
@@ -407,6 +413,7 @@ function convertirCelsiusAFahrenheit() {
 // convertirCelsiusAFahrenheit();
 
 // 4. Precio de una compra: calcula el importe total a partir del precio de un producto y el número de unidades compradas.
+// El total se obtiene multiplicando precioUnitario × unidades y se muestra por consola.
 function calcularPrecioCompra() {
     const precioUnitario = 20;
     const unidades = 3;
@@ -417,6 +424,8 @@ function calcularPrecioCompra() {
 // calcularPrecioCompra();
 
 // 5. Nómina sencilla: calcula una retención del 15 % sobre un salario bruto y muestra el salario neto.
+// Se calcula la retención multiplicando el salario por 0.15 y se resta al bruto
+// para obtener el salario neto (neto = bruto - retención).
 function calcularNomina() {
     const salarioBruto = 2000;
     const retencion = salarioBruto * 0.15;
@@ -427,6 +436,9 @@ function calcularNomina() {
 // calcularNomina();
 
 // 6. Conversión de segundos: convierte un número de segundos en horas, minutos y segundos.
+// Las horas se obtienen dividiendo entre 3600 (Math.floor para entero),
+// los minutos con el resto de dividir entre 3600 y luego entre 60,
+// y los segundos son el módulo de dividir entre 60.
 function convertirSegundos() {
     const totalSegundos = 3665;
     const horas = Math.floor(totalSegundos / 3600);
@@ -438,6 +450,8 @@ function convertirSegundos() {
 // convertirSegundos();
 
 // 7. Intercambio de valores: declara dos variables a y b, intercambia sus valores y muestra el resultado antes y después.
+// Para intercambiar sin perder ningún valor se usa una variable auxiliar (temp):
+// temp = a, a = b, b = temp.
 function intercambiarValores() {
     let a = 5;
     let b = 10;
@@ -451,6 +465,7 @@ function intercambiarValores() {
 // intercambiarValores();
 
 // 8. Mayor de edad: indica mediante un mensaje si una persona es mayor o menor de edad según su edad.
+// Se usa un if/else comparando la edad con 18: si es >= 18 es mayor, si no es menor.
 function verificarMayorEdad() {
     const edad = 20;
     if (edad >= 18) {
@@ -462,6 +477,8 @@ function verificarMayorEdad() {
 // verificarMayorEdad();
 
 // 9. Número positivo, negativo o cero: indica a cuál de estas categorías pertenece un número.
+// Se usa un if/else if/else: si el número > 0 es positivo, si < 0 es negativo,
+// y en caso contrario es cero.
 function verificarNumero() {
     const numero = -5;
     if (numero > 0) {
@@ -475,6 +492,8 @@ function verificarNumero() {
 // verificarNumero();
 
 // 10. Número mayor: dados dos números, muestra cuál es mayor o indica si son iguales.
+// Se comparan num1 y num2 con if/else if/else: mayor el primero, mayor el segundo,
+// o iguales si ninguna condición se cumple.
 function compararNumeros() {
     const num1 = 10;
     const num2 = 20;
@@ -489,6 +508,8 @@ function compararNumeros() {
 // compararNumeros();
 
 // 11. Calificación: dada una nota entre 0 y 10, indica si es suspenso, aprobado, notable o sobresaliente.
+// Se encadenan varios else if para cubrir los rangos: <5 suspenso, <7 aprobado,
+// <9 notable y el resto sobresaliente.
 function calificarNota() {
     const nota = 8;
     if (nota < 5) {
@@ -504,6 +525,8 @@ function calificarNota() {
 // calificarNota();
 
 // 12. Año bisiesto: determina si un año es bisiesto.
+// Un año es bisiesto si es divisible entre 4 Y (no divisible entre 100 O divisible entre 400).
+// Se comprueba con el operador módulo (%) y operadores lógicos && y ||.
 function esBisiesto() {
     const anio = 2024;
     if (anio % 4 === 0 && (anio % 100 !== 0 || anio % 400 === 0)) {
@@ -515,6 +538,8 @@ function esBisiesto() {
 // esBisiesto();
 
 // 13. Calculadora: dados dos números y un operador (+, -, * o /), realiza la operación con una estructura de selección.
+// Se usa un switch sobre la variable operador para ejecutar la operación correcta.
+// En la división se controla que el divisor no sea cero antes de operar.
 function calculadoraBasica() {
     const num1 = 10;
     const num2 = 5;
@@ -549,6 +574,8 @@ function calculadoraBasica() {
 // calculadoraBasica();
 
 // 14. Números del 1 al 10: muestra por consola los números del 1 al 10 utilizando una estructura de repetición.
+// Se usa un bucle for que empieza en 1, termina en 10 (condición i <= 10)
+// e imprime cada valor de i en cada iteración.
 function mostrarNumeros() {
     for (let i = 1; i <= 10; i++) {
         console.log(i);
@@ -557,6 +584,8 @@ function mostrarNumeros() {
 // mostrarNumeros();
 
 // 15. Números pares: muestra todos los números pares comprendidos entre 1 y 100.
+// Se recorre del 1 al 100 con un for y dentro se comprueba si i % 2 === 0
+// (resto de dividir entre 2 igual a cero significa que es par).
 function mostrarNumerosPares() {
     for (let i = 1; i <= 100; i++) {
         if (i % 2 === 0) {
@@ -567,6 +596,8 @@ function mostrarNumerosPares() {
 // mostrarNumerosPares();
 
 // 16. Tabla de multiplicar: dado un número, muestra su tabla de multiplicar del 1 al 10.
+// Se usa un for del 1 al 10 y en cada iteración se muestra: numero x i = resultado,
+// usando un template literal para formatear la salida.
 function mostrarTablaMultiplicar() {
     const numero = 5;
     for (let i = 1; i <= 10; i++) {
@@ -576,6 +607,8 @@ function mostrarTablaMultiplicar() {
 // mostrarTablaMultiplicar();
 
 // 17. Suma hasta N: calcula la suma de todos los números comprendidos entre 1 y N.
+// Se inicializa suma a 0 y con un for se va acumulando cada valor de i
+// desde 1 hasta N (suma += i en cada vuelta).
 function sumaHastaN() {
     const N = 10;
     let suma = 0;
@@ -587,6 +620,8 @@ function sumaHastaN() {
 // sumaHastaN();
 
 // 18. Factorial: dado un número entero positivo, calcula y muestra su factorial.
+// El factorial de N es el producto de todos los enteros del 1 al N (N! = 1×2×3×...×N).
+// Se usa un for multiplicando la variable factorial por cada i (factorial *= i).
 function calcularFactorial() {
     const numero = 5;
     let factorial = 1;
@@ -598,6 +633,8 @@ function calcularFactorial() {
 // calcularFactorial();
 
 // 19. Múltiplos de 3: dado un número N, muestra los múltiplos de 3 comprendidos entre 1 y N.
+// Se recorre con un for del 1 al N y se comprueba si i % 3 === 0
+// (divisible entre 3 sin resto) para imprimirlo.
 function mostrarMultiplosDe3() {
     const N = 30;
     for (let i = 1; i <= N; i++) {
@@ -609,23 +646,31 @@ function mostrarMultiplosDe3() {
 // mostrarMultiplosDe3();
 
 // 20. Función saludar: crea una función saludar(nombre) que reciba un nombre como parámetro y muestre un saludo personalizado.
+// La función recibe el parámetro nombre y lo inserta en un template literal
+// para formar el saludo personalizado con console.log.
 function saludar(nombre) {
     console.log(`Hola ${nombre}, ¡bienvenido!`);
 }
 // saludar("Ruben");
 
 // 21. Función para calcular un área: crea calcularArea(base, altura), que reciba la base y la altura de un rectángulo y devuelva su área.
+// La función recibe dos parámetros y retorna directamente su producto (base * altura)
+// usando la palabra clave return.
 function calcularArea(base, altura) {
     return base * altura;
 }
 // console.log(calcularArea(5, 10));
 
 // 22. Función para comprobar la mayoría de edad: crea esMayorDeEdad(edad), que devuelva true si la edad es igual o superior a 18 y false en caso contrario.
+// La función usa return con una expresión booleana: edad >= 18 devuelve
+// directamente true o false sin necesidad de un if.
 function esMayorDeEdad(edad) {
     return edad >= 18;
 }
 
 // 23. Función para obtener el mayor: crea una función que reciba dos números y devuelva el mayor.
+// Se usa un if/else: si num1 > num2 se retorna num1, en caso contrario se retorna num2.
+// También podría resolverse con el operador ternario: return num1 > num2 ? num1 : num2.
 function obtenerMayor(num1, num2) {
     if (num1 > num2) {
         return num1;
@@ -635,11 +680,15 @@ function obtenerMayor(num1, num2) {
 }
 
 // 24. Función de conversión: crea una función que reciba grados Celsius y devuelva su equivalente en Fahrenheit.
+// Se aplica la fórmula F = (C × 9/5) + 32 directamente en el return,
+// de forma que la función recibe Celsius y devuelve Fahrenheit.
 function celsiusAFahrenheit(celsius) {
     return (celsius * 9 / 5) + 32;
 }
 
 // 25. Calculadora mediante funciones: crea sumar(), restar(), multiplicar() y dividir(); solicita dos números y una operación y utiliza la función correspondiente.
+// Cada operación tiene su propia función que recibe dos parámetros y retorna el resultado.
+// En dividir() se controla la división por cero devolviendo "Error" en ese caso.
 function sumar(a, b) {
     return a + b;
 }
@@ -660,6 +709,8 @@ function dividir(a, b) {
 }
 
 // 26. Validador de notas: crea una función que reciba una nota y devuelva «Suspenso», «Aprobado», «Notable» o «Sobresaliente»; comprueba varias notas.
+// Se encadenan if/else if para cubrir los rangos de notas y se usa return
+// para devolver la cadena de texto con la calificación correspondiente.
 function validarNota(nota) {
     if (nota < 5) {
         return "Suspenso";
@@ -673,6 +724,9 @@ function validarNota(nota) {
 }
 
 // 27. Número primo: crea esPrimo(numero), que determine si un número es primo y devuelva true o false.
+// Un número primo solo es divisible entre 1 y él mismo.
+// Se descarta el caso <= 1, luego se prueba si algún número entre 2 y numero-1
+// lo divide exactamente (módulo 0). Si lo hace, no es primo.
 function esPrimo(numero) {
     if (numero <= 1) {
         return false;
@@ -687,6 +741,8 @@ function esPrimo(numero) {
 }
 
 // 28. Adivina el número: genera un número aleatorio entre 1 y 10; pide intentos al usuario e indica si ha acertado o si el número introducido es mayor o menor.
+// Math.floor(Math.random() * 10) + 1 genera el número aleatorio entre 1 y 10.
+// Se compara el intento con el número aleatorio con un if/else if/else para dar pistas.
 function adivinaNumero() {
     const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
     const intento = parseInt(window.prompt("Adivina un número entre 1 y 10: "));
@@ -701,6 +757,9 @@ function adivinaNumero() {
 }
 
 // 29. Menú de operaciones: crea un menú para sumar, restar, multiplicar, dividir o salir; utiliza funciones, selección y repetición.
+// Se usa un do/while para repetir el menú hasta elegir salir (opción 5).
+// Cada opción pide dos números al usuario y llama a la función correspondiente
+// (sumar, restar, multiplicar, dividir) definidas en el ejercicio 25.
 function menuOperaciones() {
     let opcion = "";
 
@@ -732,6 +791,9 @@ function menuOperaciones() {
 }
 
 // 30. Calculadora avanzada: permite sumar, restar, multiplicar, dividir y calcular potencias; usa una función por operación, repite el menú hasta salir y controla la división entre cero.
+// Se piden los dos números y el operador simbólico (+, -, *, /, ^) con un prompt.
+// Un switch selecciona la función a ejecutar. Para ^ se usa la función potencia()
+// que multiplica la base por sí misma tantas veces como indica el exponente.
 function potencia(base, exponente) {
     let resultado = 1;
 
@@ -774,6 +836,9 @@ function calculadoraAvanzada() {
 }
 
 // 31. Sistema de calificaciones: solicita cuántas notas se introducirán, recógelas con un bucle, valida que estén entre 0 y 10 y usa funciones para calcular la media y la calificación final.
+// Las notas se guardan en un array usando push(). Un while interior valida que cada nota
+// esté entre 0 y 10 antes de agregarla. La función mediaNotas() suma los elementos
+// del array y divide entre su longitud. Luego se llama a validarNota() para la calificación.
 function mediaNotas(notas) {
     let suma = 0;
 
@@ -805,6 +870,9 @@ function sistemaCalificaciones() {
 }
 
 // 32. Cajero automático: permite consultar el saldo, retirar, ingresar dinero o salir; usa funciones y un menú repetitivo, e impide retirar más del saldo o cantidades no positivas.
+// El saldo inicial es 1000€. Un do/while repite el menú hasta elegir salir.
+// Al ingresar se valida que la cantidad sea > 0; al retirar se comprueba además
+// que no supere el saldo disponible para evitar números negativos.
 function cajeroAutomatico() {
     let saldo = 1000;
     let opcion = "";
@@ -837,6 +905,9 @@ function cajeroAutomatico() {
 }
 
 // 33. Juego de adivinanza: genera un número aleatorio entre 1 y 100; indica si cada intento es mayor o menor, cuenta los intentos y termina al acertar. Organiza el programa con funciones.
+// El número secreto se genera con Math.floor(Math.random() * 100) + 1.
+// Un do/while pide intentos al usuario y muestra si el número es mayor o menor.
+// El contador se incrementa en cada vuelta y se muestra al acertar.
 function juegoAdivinanza() {
     const numeroSecreto = Math.floor(Math.random() * 100) + 1;
     let intento = 0;
@@ -857,6 +928,9 @@ function juegoAdivinanza() {
 }
 
 // 34. Conversor de unidades: permite convertir kilómetros a millas, Celsius a Fahrenheit, kilogramos a libras o euros a dólares; usa una función por conversión y repite hasta salir.
+// Cada conversión tiene su propia función con la fórmula correspondiente.
+// Un do/while presenta el menú y llama a la función adecuada según la opción elegida.
+// El bucle se repite hasta que el usuario elige salir (opción 5).
 function kmAMillas(km) {
     return km * 0.621;
 }
@@ -901,6 +975,9 @@ function conversorUnidades() {
 
 // 35. Control de acceso: almacena un usuario y una contraseña, permite un máximo de tres intentos y bloquea el acceso al agotarlos.
 // Crea funciones para comprobar credenciales y mostrar el resultado.
+// Se usa un while con un contador de intentos (máximo 3). Si las credenciales coinciden
+// se muestra acceso permitido y se sale con break. Si se agotan los 3 intentos
+// se muestra que la cuenta está bloqueada.
 function controlAcceso() {
     const usuarioValido = "admin";
     const passwordValido = "1234";
@@ -926,6 +1003,9 @@ function controlAcceso() {
 
 // 36. Facturación de un producto: calcula el importe a partir del precio y la cantidad; aplica 0 % si es menos de 50 €, 5 % entre 50 € y 100 €, 10 % entre 100 € y 200 € y 15 % si supera 200 €, 
 // y después calcula el IVA del 21 %. Separa los cálculos en funciones.
+// calcularDescuento() devuelve el porcentaje de descuento según el subtotal.
+// facturacionProducto() pide precio y cantidad, calcula el subtotal, aplica el descuento
+// y finalmente añade el IVA del 21% al total con descuento.
 function calcularDescuento(total) {
     if (total < 50) {
         return 0;
@@ -953,6 +1033,8 @@ function facturacionProducto() {
 
 // 37. Menú de gestión de una cuenta: permite consultar saldo, ingresar dinero, retirar, comprobar si hay saldo suficiente o salir; 
 // implementa cada operación con una función y controla las operaciones no válidas.
+// Similar al cajero (ej. 32) pero con una opción extra: comprobar si hay saldo
+// suficiente para una cantidad dada. El do/while mantiene el menú activo hasta salir.
 function menuCuenta() {
     let saldo = 500;
     let opcion = "";
@@ -992,6 +1074,9 @@ function menuCuenta() {
 }
 
 // 38. Estadísticas de números: procesa con un bucle una cantidad determinada de números y calcula el mayor, el menor, la suma y la media. No uses arrays; organiza el código con funciones.
+// Se usan variables mayor, menor y suma (sin arrays). En la primera iteración (i === 0)
+// se inicializan mayor y menor con el primer número. En las siguientes se comparan
+// con el número actual para actualizarlos si corresponde. La media = suma / cantidad.
 function estadisticasNumeros() {
     const cantidad = parseInt(window.prompt("¿Cuántos números quieres introducir? "));
     let mayor = 0;
@@ -1026,6 +1111,9 @@ function estadisticasNumeros() {
 
 // 39. Programa integrador, gestión de notas: permite introducir el nombre del alumno y varias notas, calcular la media, 
 // determinar la calificación y mostrar si ha aprobado. Incluye un menú hasta salir y controla entradas incorrectas.
+// Un do/while presenta el menú. Al elegir la opción 1 se pide el nombre y la cantidad de notas.
+// Un while interior valida que cada nota esté entre 0 y 10. Tras recoger todas,
+// se calcula la media, se llama a validarNota() y se indica si ha aprobado (media >= 5).
 function gestionNotas() {
     let opcion = "";
 
@@ -1066,6 +1154,9 @@ function gestionNotas() {
 
 // 40. Reto final, simulador de tienda: permite consultar opciones, introducir precio y cantidad, calcular el subtotal, 
 // aplicar descuentos según el importe y calcular el IVA. Incluye un menú hasta finalizar la compra.
+// Se acumulan los subtotales de varios productos en subtotalGeneral.
+// Al finalizar la compra (opción 2) se llama a calcularDescuento() para el porcentaje
+// de descuento, se aplica y luego se añade el IVA del 21% para obtener el total final.
 function simuladorTienda() {
     let subtotalGeneral = 0;
     let opcion = "";
