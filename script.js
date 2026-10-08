@@ -1183,4 +1183,3 @@ function simuladorTienda() {
         }
     } while (opcion !== "2");
 }
-
