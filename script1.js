@@ -127,7 +127,7 @@ function ejercicio3(){
 //e. Actualizar página
 //f. No hacer nada. Salir
 function ejercicio4(){
-    let opcion = window.prompt("Menu de opciones:\n a. Ir atrás \n b. Ir hacia delante \n c. Ir a una dirección \n d. Mostrar la dirección actual \n e. Actualizar página \n f. No hacer nada. Salir");
+    const opcion = window.prompt("Menu de opciones:\n a. Ir atrás \n b. Ir hacia delante \n c. Ir a una dirección \n d. Mostrar la dirección actual \n e. Actualizar página \n f. No hacer nada. Salir");
 }
 
 // ejercicio4();
@@ -147,13 +147,19 @@ function ejercicio5(){
     }
 }
 
-ejercicio5();
+// ejercicio5();
 
 //Ejercicio 6
 //Contador de recargas. Cada vez que el usuario abra la página, 
 //acceda o actualice debe incrementar el numero de visitas.
 function ejercicio6(){
-    
+    let contador = localStorage.getItem("contador");
+    if (contador) {
+        contador = parseInt(contador) + 1;
+    } else {
+        contador = 1;
+    }
+
 }
 
 ejercicio6();
