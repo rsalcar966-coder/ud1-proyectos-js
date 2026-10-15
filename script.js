@@ -839,131 +839,98 @@ function saludar(nombre) {
 // // Las notas se guardan en un array usando push(). Un while interior valida que cada nota
 // // esté entre 0 y 10 antes de agregarla. La función mediaNotas() suma los elementos
 // // del array y divide entre su longitud. Luego se llama a validarNota() para la calificación.
-function mediaNotas(notas) {
-    let suma = 0;
+// function mediaNotas(notas) {
+//     let suma = 0;
 
-    for (let i = 0; i < notas.length; i++) {
-        suma += notas[i];
-    }
+//     for (let i = 0; i < notas.length; i++) {
+//         suma += notas[i];
+//     }
 
-    return suma / notas.length;
-}
+//     return suma / notas.length;
+// }
 
-function sistemaCalificaciones() {
-    const cantidad = parseInt(window.prompt("¿Cuántas notas quieres introducir? "));
-    let notas = [];
+// function sistemaCalificaciones() {
+//     const cantidad = parseInt(window.prompt("¿Cuántas notas quieres introducir? "));
+//     let notas = [];
 
-    for (let i = 0; i < cantidad; i++) {
-        let nota = parseFloat(window.prompt("Introduce la nota " + (i + 1) + ": "));
+//     for (let i = 0; i < cantidad; i++) {
+//         let nota = parseFloat(window.prompt("Introduce la nota " + (i + 1) + ": "));
 
-        while (nota < 0 || nota > 10) {
-            console.log("La nota debe estar entre 0 y 10");
-            nota = parseFloat(window.prompt("Introduce la nota " + (i + 1) + ": "));
-        }
+//         while (nota < 0 || nota > 10) {
+//             console.log("La nota debe estar entre 0 y 10");
+//             nota = parseFloat(window.prompt("Introduce la nota " + (i + 1) + ": "));
+//         }
 
-        notas.push(nota);
-    }
+//         notas.push(nota);
+//     }
 
-    const resultado = mediaNotas(notas);
-    console.log("La media es: " + resultado);
-    console.log(validarNota(resultado));
-}
+//     const resultado = mediaNotas(notas);
+//     console.log("La media es: " + resultado);
+//     console.log(validarNota(resultado));
+// }
 
-// // 32. Cajero automático: permite consultar el saldo, retirar, ingresar dinero o salir; usa funciones y un menú repetitivo, e impide retirar más del saldo o cantidades no positivas.
-// // El saldo inicial es 1000€. Un do/while repite el menú hasta elegir salir.
-// // Al ingresar se valida que la cantidad sea > 0; al retirar se comprueba además
-// // que no supere el saldo disponible para evitar números negativos.
-function cajeroAutomatico() {
-    let saldo = 1000;
-    let opcion = "";
+// // // 32. Cajero automático: permite consultar el saldo, retirar, ingresar dinero o salir; usa funciones y un menú repetitivo, e impide retirar más del saldo o cantidades no positivas.
+// // // El saldo inicial es 1000€. Un do/while repite el menú hasta elegir salir.
+// // // Al ingresar se valida que la cantidad sea > 0; al retirar se comprueba además
+// // // que no supere el saldo disponible para evitar números negativos.
+// function cajeroAutomatico() {
+//     let saldo = 1000;
+//     let opcion = "";
 
-    do {
-        opcion = window.prompt("1. Consultar saldo\n2. Ingresar dinero\n3. Retirar dinero\n4. Salir");
+//     do {
+//         opcion = window.prompt("1. Consultar saldo\n2. Ingresar dinero\n3. Retirar dinero\n4. Salir");
 
-        if (opcion === "1") {
-            console.log("Tu saldo es: " + saldo + "€");
-        } else if (opcion === "2") {
-            const cantidad = parseFloat(window.prompt("¿Cuánto quieres ingresar? "));
-            if (cantidad > 0) {
-                saldo += cantidad;
-            } else {
-                console.log("Cantidad incorrecta");
-            }
-        } else if (opcion === "3") {
-            const cantidad = parseFloat(window.prompt("¿Cuánto quieres retirar? "));
-            if (cantidad > 0 && cantidad <= saldo) {
-                saldo -= cantidad;
-            } else {
-                console.log("No puedes retirar esa cantidad");
-            }
-        } else if (opcion === "4") {
-            console.log("Gracias por usar el cajero");
-        } else {
-            console.log("Opción inválida");
-        }
-    } while (opcion !== "4");
-}
+//         if (opcion === "1") {
+//             console.log("Tu saldo es: " + saldo + "€");
+//         } else if (opcion === "2") {
+//             const cantidad = parseFloat(window.prompt("¿Cuánto quieres ingresar? "));
+//             if (cantidad > 0) {
+//                 saldo += cantidad;
+//             } else {
+//                 console.log("Cantidad incorrecta");
+//             }
+//         } else if (opcion === "3") {
+//             const cantidad = parseFloat(window.prompt("¿Cuánto quieres retirar? "));
+//             if (cantidad > 0 && cantidad <= saldo) {
+//                 saldo -= cantidad;
+//             } else {
+//                 console.log("No puedes retirar esa cantidad");
+//             }
+//         } else if (opcion === "4") {
+//             console.log("Gracias por usar el cajero");
+//         } else {
+//             console.log("Opción inválida");
+//         }
+//     } while (opcion !== "4");
+// }
 
 // // 33. Juego de adivinanza: genera un número aleatorio entre 1 y 100; indica si cada intento es mayor o menor, cuenta los intentos y termina al acertar. Organiza el programa con funciones.
 // // El número secreto se genera con Math.floor(Math.random() * 100) + 1.
 // // Un do/while pide intentos al usuario y muestra si el número es mayor o menor.
-// // El contador se incrementa en cada vuelta y se muestra al acertar.
+// El contador se incrementa en cada vuelta y se muestra al acertar.
 
+function ejercicio33() {
+    const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    let intento = 0;
+    let contador = 0;
 
+    do {
+        intento = parseInt(window.prompt("Adivina el numero entre 1 y 100 "));
+        contador++;
 
+        if (intento < numeroSecreto) {
+            console.log("Es mayor");
+        } else if (intento > numeroSecreto) {
+            console.log("Es menor");  
+        }else {
+            console.log("Has acertado en " + contador + " intentos");
+        }
 
+    } while (intento !== numeroSecreto);
 
+}
+// ejercicio33();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function juegoAdivinanza() {
-//     const numeroSecreto = Math.floor(Math.random() * 100) + 1;
-//     let intento = 0;
-//     let contador = 0;
-
-//     do {
-//         intento = parseInt(window.prompt("Adivina el número entre 1 y 100: "));
-//         contador++;
-
-//         if (intento < numeroSecreto) {
-//             console.log("Es mayor");
-//         } else if (intento > numeroSecreto) {
-//             console.log("Es menor");
-//         } else {
-//             console.log("¡Has acertado! En " + contador + " intentos");
-//         }
-//     } while (intento !== numeroSecreto);
-// }
 
 // // 34. Conversor de unidades: permite convertir kilómetros a millas, Celsius a Fahrenheit, kilogramos a libras o euros a dólares; usa una función por conversión y repite hasta salir.
 // // Cada conversión tiene su propia función con la fórmula correspondiente.
@@ -1039,7 +1006,7 @@ function cajeroAutomatico() {
 //     }
 // }
 
-// // 36. Facturación de un producto: calcula el importe a partir del precio y la cantidad; aplica 0 % si es menos de 50 €, 5 % entre 50 € y 100 €, 10 % entre 100 € y 200 € y 15 % si supera 200 €, 
+// // 36. Facturación de un producto: calcula el importe a partir del precio y la cantidad; aplica 0 % si es menos de 50 €, 5 % entre 50 € y 100 €, 10 % entre 100 € y 200 € y 15 % si supera 200 €,
 // // y después calcula el IVA del 21 %. Separa los cálculos en funciones.
 // // calcularDescuento() devuelve el porcentaje de descuento según el subtotal.
 // // facturacionProducto() pide precio y cantidad, calcula el subtotal, aplica el descuento
@@ -1069,7 +1036,7 @@ function cajeroAutomatico() {
 //     console.log("Total final: " + totalFinal.toFixed(2) + "€");
 // }
 
-// // 37. Menú de gestión de una cuenta: permite consultar saldo, ingresar dinero, retirar, comprobar si hay saldo suficiente o salir; 
+// // 37. Menú de gestión de una cuenta: permite consultar saldo, ingresar dinero, retirar, comprobar si hay saldo suficiente o salir;
 // // implementa cada operación con una función y controla las operaciones no válidas.
 // // Similar al cajero (ej. 32) pero con una opción extra: comprobar si hay saldo
 // // suficiente para una cantidad dada. El do/while mantiene el menú activo hasta salir.
@@ -1147,7 +1114,7 @@ function cajeroAutomatico() {
 //     console.log("Media: " + media);
 // }
 
-// // 39. Programa integrador, gestión de notas: permite introducir el nombre del alumno y varias notas, calcular la media, 
+// // 39. Programa integrador, gestión de notas: permite introducir el nombre del alumno y varias notas, calcular la media,
 // // determinar la calificación y mostrar si ha aprobado. Incluye un menú hasta salir y controla entradas incorrectas.
 // // Un do/while presenta el menú. Al elegir la opción 1 se pide el nombre y la cantidad de notas.
 // // Un while interior valida que cada nota esté entre 0 y 10. Tras recoger todas,
@@ -1190,7 +1157,7 @@ function cajeroAutomatico() {
 //     } while (opcion !== "2");
 // }
 
-// // 40. Reto final, simulador de tienda: permite consultar opciones, introducir precio y cantidad, calcular el subtotal, 
+// // 40. Reto final, simulador de tienda: permite consultar opciones, introducir precio y cantidad, calcular el subtotal,
 // // aplicar descuentos según el importe y calcular el IVA. Incluye un menú hasta finalizar la compra.
 // // Se acumulan los subtotales de varios productos en subtotalGeneral.
 // // Al finalizar la compra (opción 2) se llama a calcularDescuento() para el porcentaje
